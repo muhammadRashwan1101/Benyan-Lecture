@@ -1,0 +1,48 @@
+.sidebar {
+    width: 20% !important;
+    height: 100vh !important;
+    background-color: var(--main-color) !important
+}
+
+h3 {
+    color: #6882A1 !important;
+    font-family: Montserrat, sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+}
+li {
+    color: white !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important ;
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer;
+    transition: background 0.3s ease !important;
+    padding: 10px 5px !important;
+}
+
+li:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    transition: background 0.3s ease !important;
+}
+
+.a {
+    color: white !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important ;
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+}
+
+li i {
+    display: inline-block !important;
+    width: 40px !important;
+    color: white !important;
+}
+
+.active {
+    background: rgba(255, 255, 255, 0.2) !important;
+    transition: background 0.3s ease !important;
+}

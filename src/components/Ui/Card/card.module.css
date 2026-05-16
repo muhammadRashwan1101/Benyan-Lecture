@@ -1,0 +1,13 @@
+.card {
+    background-color: #6EC1E4 !important;
+    border-radius: 12px;
+    max-width: 280px;
+}
+
+.iconContainer i {
+    color: var(--main-color) !important;        
+}
+
+.info {
+    color: var(--main-color) !important;
+}
