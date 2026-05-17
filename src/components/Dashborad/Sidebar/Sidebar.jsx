@@ -1,6 +1,7 @@
 import style from "./sidebar.module.css";
 import { NavLink } from "react-router-dom";
-
+import { useContext } from "react";
+import { DraftContext } from "../../../context/DraftContext";
 const Links = [
     {
         name: "User Management",
@@ -30,6 +31,8 @@ const Links = [
 ]
 
 export default function Sidebar() {
+    const { draft } = useContext(DraftContext);
+    console.log(draft)
   return (
     <div className={`${style["sidebar"]} bg-primary w-25 d-flex flex-column`}>
         <h3 className="px-5 pt-4 text-uppercase">Dashboards</h3>
@@ -40,9 +43,12 @@ export default function Sidebar() {
                     className={({ isActive }) => isActive ?  `${style["active"]} ${style["a"]}` : `${style["a"]}`}
                     to={link.path}
                 >
-                    <li className="list-group-item list-group-item-action">
-                        {link.icon}
-                        {link.name}
+                    <li className="list-group-item list-group-item-action d-flex align-items-center justify-content-between">
+                        <div>
+                            {link.icon}
+                            {link.name}
+                        </div>
+                    {draft === link.path && <div className={`${style.draft}`}></div>}
                     </li>
                 </NavLink>
             ))}

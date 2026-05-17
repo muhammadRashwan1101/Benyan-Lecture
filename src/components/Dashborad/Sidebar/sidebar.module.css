@@ -46,3 +46,41 @@ li i {
     background: rgba(255, 255, 255, 0.2) !important;
     transition: background 0.3s ease !important;
 }
+
+.draft {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+    background: red;
+    animation: glow 1.5s infinite ease-in-out;
+}
+
+@keyframes glow {
+
+    0% {
+        transform: scale(1);
+        box-shadow:
+            0 0 5px rgba(255, 0, 0, 0.3),
+            0 0 10px rgba(255, 0, 0, 0.3),
+            0 0 20px rgba(255, 0, 0, 0.3);
+    }
+
+    50% {
+        transform: scale(1.15);
+        box-shadow:
+            0 0 10px rgba(255, 0, 0, 0.5),
+            0 0 20px rgba(255, 0, 0, 0.5),
+            0 0 40px rgba(255, 0, 0, 0.5);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow:
+            0 0 5px rgba(255, 0, 0, 0.3),
+            0 0 10px rgba(255, 0, 0, 0.3),
+            0 0 20px rgba(255, 0, 0, 0.3);
+    }
+}
+
+
